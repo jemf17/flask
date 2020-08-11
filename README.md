@@ -93,7 +93,7 @@ from flask_mail import Mail, Message
 
 **Paso 5** el código completo se proporciona a continuación. Ejecute el siguiente script en Python Shell y visite **http://localhost:5000/**.
 
-<code>
+~~~
 from flask import Flask
 from flask_mail import Mail, Message
 
