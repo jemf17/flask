@@ -1,4 +1,4 @@
-# Enviar gmail atravez de flask
+# Enviar gmail atravez de flask #
 
 A menudo se requiere una aplicación basada en web para tener una función de envío de correo a los usuarios / clientes. La extensión Flask-Mail facilita la configuración de una interfaz simple con cualquier servidor de correo electrónico.
 
@@ -22,7 +22,7 @@ Luego, Flask-Mail debe configurarse estableciendo valores de los siguientes par�
 
 El módulo flask-mail contiene definiciones de las siguientes clases importante
 
-### Clase Correo
+### Clase Correo ###
 
 Gestiona los requisitos de mensajería de correo electrónico. El constructor de la clase tiene la siguiente forma:
 
@@ -30,20 +30,20 @@ Gestiona los requisitos de mensajería de correo electrónico. El constructor de
 
 El constructor toma el objeto de aplicación Flask como parámetro.
 
-### Métodos de clase Correo
+### Métodos de clase Correo ###
 
 - **send():** Envía el contenido del objeto de clase de mensaje
 - **connect():** Abre la conexión con el host de correo
 - **send_message():** Envía objeto de mensaje
 
-### Clase Message
+### Clase Message ###
 
 Encapsula un mensaje de correo electrónico. El constructor de la clase de mensaje tiene varios parámetros:
 
 <code>flask-mail.Message(subject, recipients, body, html, sender, cc, bcc, 
 reply-to, date, charset, extra_headers, mail_options, rcpt_options)<code>
 
-### Métodos de clase Mesaage
+### Métodos de clase Mesaage ###
 
 **attach():** agrega un archivo adjunto al mensaje. Este método toma los siguientes parámetros:
 
