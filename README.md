@@ -93,7 +93,8 @@ from flask_mail import Mail, Message
     msg = Message('hola', sender = 'tu@gmail.com', recipients = ['victima@gmail.com'])
     msg.body = "hola, como andas?"
     mail.send(msg)
-    return "enviar"<code>
+    return "enviar"
+~~~
 
 **Paso 5** el código completo se proporciona a continuación. Ejecute el siguiente script en Python Shell y visite **http://localhost:5000/**.
 
