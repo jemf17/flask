@@ -4,7 +4,7 @@ A menudo se requiere una aplicación basada en web para tener una función de en
 
 Al principio, la extensión __Flask-Mail__ debe instalarse con la ayuda de la utilidad pip.
 
-'pip install Flask-Mail'
+~~~ pip install Flask-Mail ~~~
 
 Luego, Flask-Mail debe configurarse estableciendo valores de los siguientes parámetros de la aplicación.
 
@@ -26,7 +26,7 @@ El módulo flask-mail contiene definiciones de las siguientes clases importante
 
 Gestiona los requisitos de mensajería de correo electrónico. El constructor de la clase tiene la siguiente forma:
 
-<code>flask-mail.Mail(app = None)<code>
+~~~ flask-mail.Mail(app = None) ~~~
 
 El constructor toma el objeto de aplicación Flask como parámetro.
 
@@ -60,7 +60,9 @@ En el siguiente ejemplo, el servidor SMTP del servicio de gmail de Google se uti
 
 **Paso 1**  importe la clase de correo y mensaje del módulo flask-mail en el código.
 
-~~~ from flask_mail import Mail, Message ~~~
+~~~ 
+from flask_mail import Mail, Message 
+~~~
 
 **Paso 2** luego, Flask-Mail se configura según las siguientes configuraciones.
 
@@ -75,7 +77,9 @@ En el siguiente ejemplo, el servidor SMTP del servicio de gmail de Google se uti
 
 **Paso 3** crea una instancia de la clase Mail.
 
-~~~ mail = Mail(app) ~~~ 
+~~~
+ mail = Mail(app) 
+~~~ 
 
 **Paso 4** configure un objeto de mensaje en una función de Python asignada por la regla de URL('/').
 
