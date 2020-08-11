@@ -40,8 +40,8 @@ El constructor toma el objeto de aplicación Flask como parámetro.
 
 Encapsula un mensaje de correo electrónico. El constructor de la clase de mensaje tiene varios parámetros:
 
-'flask-mail.Message(subject, recipients, body, html, sender, cc, bcc, 
-reply-to, date, charset, extra_headers, mail_options, rcpt_options)'
+<code>flask-mail.Message(subject, recipients, body, html, sender, cc, bcc, 
+reply-to, date, charset, extra_headers, mail_options, rcpt_options)<code>
 
 ### Métodos de clase Mesaage
 
@@ -58,33 +58,35 @@ En el siguiente ejemplo, el servidor SMTP del servicio de gmail de Google se uti
 
 **Paso 1**  importe la clase de correo y mensaje del módulo flask-mail en el código.
 
-'from flask_mail import Mail, Message'
+<code>from flask_mail import Mail, Message<code>
 
 **Paso 2** luego, Flask-Mail se configura según las siguientes configuraciones.
 
-'app.config['MAIL_SERVER']="smtp.gmail.com"
+<code>]
+ app.config['MAIL_SERVER']="smtp.gmail.com"
  app.config['MAIL_PORT'] = 465
  app.config['MAIL_USERNAME'] = "tu@gmail.com"
  app.config['MAIL_PASSWORD'] = "*****"
  app.config['MAIL_USE_TLS'] = False
- app.config['MAIL_USE_SSL'] = True'
+ app.config['MAIL_USE_SSL'] = True<code>
 
 **Paso 3** crea una instancia de la clase Mail.
 
-'mail = Mail(app)'
+<code>mail = Mail(app)<code>
 
 **Paso 4** configure un objeto de mensaje en una función de Python asignada por la regla de URL('/').
 
-'@app.route("/")
+<code>
+ @app.route("/")
  def index():
     msg = Message('hola', sender = 'tu@gmail.com', recipients = ['victima@gmail.com'])
     msg.body = "hola, como andas?"
     mail.send(msg)
-    return "enviar"'
+    return "enviar"<code>
 
 **Paso 5** el código completo se proporciona a continuación. Ejecute el siguiente script en Python Shell y visite **http://localhost:5000/**.
 
-'
+<code>
 from flask import Flask
 from flask_mail import Mail, Message
 
@@ -107,6 +109,6 @@ def index():
    return "Sent"
 
 if __name__ == '__main__':
-   app.run(debug = True)'
+   app.run(debug = True)<code>
 
 Tenga en cuenta que las funciones de inseguridad integradas en el servicio de Gmail pueden bloquear este intento de inicio de sesión. Puede que tenga que reducir el nivel de seguridad. Inicie sesión en su cuenta de Gmail y [cambie la configuracion](https://myaccount.google.com/lesssecureapps)
