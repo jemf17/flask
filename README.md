@@ -22,15 +22,15 @@ Luego, Flask-Mail debe configurarse estableciendo valores de los siguientes par�
 
 El módulo flask-mail contiene definiciones de las siguientes clases importante
 
-### Clase de correo
+### Clase Correo
 
 Gestiona los requisitos de mensajería de correo electrónico. El constructor de la clase tiene la siguiente forma:
 
-'flask-mail.Mail(app = None)'
+<code>flask-mail.Mail(app = None)<code>
 
 El constructor toma el objeto de aplicación Flask como parámetro.
 
-###Métodos de clase de correo
+### Métodos de clase Correo
 
 - **send():** Envía el contenido del objeto de clase de mensaje
 - **connect():** Abre la conexión con el host de correo
